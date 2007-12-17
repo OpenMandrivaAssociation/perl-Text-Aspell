@@ -13,7 +13,6 @@ URL:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.bz2
 BuildRequires:  perl-devel
 BuildRequires:  aspell-devel 
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This module provides a Perl interface to the GNU Aspell library. The GNU Aspell
