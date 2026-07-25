@@ -2,14 +2,14 @@
 %define upstream_version 0.09
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	5
+Version:    %{upstream_version}
+Release:	6
 
 Summary:    Perl interface to the GNU Aspell library
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:        https://metacpan.org/dist/Text-Aspell
+Source0:    https://cpan.metacpan.org/authors/id/H/HA/HANK/Text-Aspell-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:  perl-devel
@@ -97,7 +97,7 @@ rm -rf %{buildroot}
 * Tue Jul 11 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.06-1mdv2007.0
 - New version 0.06
 
-* Fri Apr 28 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.05-2mdk
+* Fri Apr 28 2006 Nicolas Lï¿½cureuil <neoclust@mandriva.org> 0.05-2mdk
 - Fix SPEC according to Perl Policy
     - Source URL
 - use mkrel
