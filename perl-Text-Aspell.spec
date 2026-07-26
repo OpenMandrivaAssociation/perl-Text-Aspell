@@ -1,15 +1,13 @@
 %define upstream_name    Text-Aspell
-%define upstream_version 0.09
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	6
+Version:    0.09
+Release:	7
 
 Summary:    Perl interface to the GNU Aspell library
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/Text-Aspell
-Source0:    https://cpan.metacpan.org/authors/id/H/HA/HANK/Text-Aspell-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/H/HA/HANK/Text-Aspell-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:  perl-devel
@@ -26,7 +24,7 @@ This is a Perl xs interface which should provide good performance compared to
 forking the aspell program for every word.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -61,9 +59,7 @@ rm -rf %{buildroot}
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.90.0-1mdv2010.0
 + Revision: 405606
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.09-5mdv2009.0
+- rebuild using %0.09 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.09-5mdv2009.0
 + Revision: 258610
 - rebuild
 
