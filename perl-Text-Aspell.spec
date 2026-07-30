@@ -2,7 +2,7 @@
 %define upstream_version 0.09
 Name:       perl-%{upstream_name}
 Version:	0.09
-Release:	2
+Release:	3
 
 Summary:    Perl interface to the GNU Aspell library
 License:    GPL+ or Artistic
@@ -13,7 +13,6 @@ Source0:	https://cpan.metacpan.org/authors/id/H/HA/HANK/Text-Aspell-0.09.tar.gz
 BuildRequires:	make
 BuildRequires:  perl-devel
 BuildRequires:  aspell-devel 
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a Perl interface to the GNU Aspell library. The GNU Aspell
@@ -28,7 +27,7 @@ forking the aspell program for every word.
 %setup -q -n Text-Aspell-0.09
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %install
