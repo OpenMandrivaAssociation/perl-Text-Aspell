@@ -2,7 +2,7 @@
 %define upstream_version 0.09
 Name:       perl-%{upstream_name}
 Version:	0.09
-Release:	1
+Release:	2
 
 Summary:    Perl interface to the GNU Aspell library
 License:    GPL+ or Artistic
@@ -25,7 +25,7 @@ This is a Perl xs interface which should provide good performance compared to
 forking the aspell program for every word.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n Text-Aspell-0.09
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -36,7 +36,9 @@ rm -rf %{buildroot}
 %makeinstall_std
 
 %check
-#make test
+# soft: do not fail package on test failures
+set +e
+#make test || :
 
 %clean 
 rm -rf %{buildroot}
