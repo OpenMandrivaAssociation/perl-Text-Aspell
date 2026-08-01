@@ -2,7 +2,7 @@
 %define upstream_version 0.09
 Name:       perl-%{upstream_name}
 Version:	0.09
-Release:	3
+Release:	4
 
 Summary:    Perl interface to the GNU Aspell library
 License:    GPL+ or Artistic
